@@ -1,0 +1,49 @@
+[project]
+name = "memorag"
+version = "0.1.0"
+description = "A RAG CLI application to store and retrieve technical decisions"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "patacoing", email = "romain.lefebvre1104@gmail.com"},
+]
+
+dependencies = [
+    "typer>=0.9.0",
+    "sentence-transformers>=2.2.2",
+    "qdrant-client>=1.16.2",
+    "litellm>=1.81.3",
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent"
+]
+
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/patacoing/memorag"
+Issues = "https://github.com/patacoing/memorag/issues"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-asyncio>=1.3.0",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.14.11",
+    "ty>=0.0.11",
+]
+
+[project.scripts]
+memorag = "memorag.presentation.cli.main:app"
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "memorag"
+module-root = ""
+source-exclude = []

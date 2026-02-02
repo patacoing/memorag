@@ -1,0 +1,8 @@
+[run]
+omit =
+    */tests/*
+    memorag/presentation/cli/main.py
+    memorag/infrastructure/adapters/*
+
+[report]
+fail_under = 80

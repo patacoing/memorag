@@ -1,0 +1,5 @@
+[src]
+exclude = ["tests"]
+
+[terminal]
+error-on-warning = true
